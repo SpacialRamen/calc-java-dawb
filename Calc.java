@@ -37,8 +37,10 @@ public class Calc {
             return divide(num1, num2);
         case "suma":
             return suma(num1, num2);
+        case "resta":
+            return resta(num1, num2);
         default:
-            throw new IllegalArgumentException("Operación no soportada");          
+            throw new IllegalArgumentException("Operación no soportada");         
         }
     }
 }
@@ -61,5 +63,7 @@ public class Calc {
     }
     public static int suma(int num1, int num2) {
         return num1 + num2;
+    public static int resta(int num1, int num2) {
+        return num1 - num2;
     }
 }
