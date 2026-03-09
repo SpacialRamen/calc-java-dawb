@@ -35,8 +35,11 @@ public class Calc {
             return divideE(num1, num2);
         case "divide":
             return divide(num1, num2);
+        case "suma":
+            return suma(num1, num2);
         default:
-            throw new IllegalArgumentException("Operación no soportada");
+            throw new IllegalArgumentException("Operación no soportada");          
+        }
     }
 }
 
@@ -56,6 +59,7 @@ public class Calc {
     if (num2 == 0) {
         throw new IllegalArgumentException("Error: No se puede dividir por cero");
     }
-    return num1 / num2;
+    public static int suma(int num1, int num2) {
+        return num1 + num2;
     }
 }
