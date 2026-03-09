@@ -28,13 +28,15 @@ public class Calc {
     }
 
     public static int calculate(String operation, int num1, int num2) {
-        switch (operation) {
-            case "multiplica":
-                return multiplica(num1, num2);
-            default:
-                throw new IllegalArgumentException("Operación no soportada");
-        }
+    switch (operation) {
+        case "multiplica":
+            return multiplica(num1, num2);
+        case "divide":
+            return divideE(num1, num2);
+        default:
+            throw new IllegalArgumentException("Operación no soportada");
     }
+}
 
     public static int multiplica(int num1, int num2) {
         return num1 * num2;
@@ -42,5 +44,9 @@ public class Calc {
 
     public static void showResult(String operation, int result) {
         System.out.println("El resultado de la operación \"" + operation + "\" es: " + result);
+    }
+
+    public static int divideE(int num1, int num2) {
+    return num1 / num2;
     }
 }
